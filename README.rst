@@ -7,7 +7,8 @@ It is viewer for RCRS agents developer.
 Usage
 =========
 
-Please see runDebug.sh, DebugAmbulanceTeam.java, DebugPoliceForce.java and DebugFireBrigade.java in the RescueStarterPack repository.
+Please see runDebug.sh, DebugAmbulanceTeam.java, DebugPoliceForce.java and DebugFireBrigade.java
+in the `RescueStarterPack <http://github.com/ri-one/RescueStarterPack>`_ repository.
 
 resq.js
 ==============
