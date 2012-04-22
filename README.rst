@@ -19,7 +19,7 @@ Please read ScriptController.java
 Contact
 ===================
 
-Ri-one, RoboCup Simulation League Project Team
+Ri-one - RoboCup Simulation League Project Team,
 Ritsumeikan University
 College of Information Science and Engnieering
 http://www.pj.is.ritsumei.ac.jp/ri-one/
