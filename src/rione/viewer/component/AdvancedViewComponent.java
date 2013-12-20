@@ -44,6 +44,7 @@ import rescuecore2.standard.entities.StandardWorldModel;
 import rescuecore2.standard.view.AnimatedWorldModelViewer;
 import rescuecore2.view.RenderedObject;
 import rescuecore2.view.ViewComponent;
+import rescuecore2.view.ViewLayer;
 import rescuecore2.view.ViewListener;
 import rescuecore2.worldmodel.AbstractEntity;
 import rescuecore2.worldmodel.EntityID;
@@ -134,6 +135,12 @@ public class AdvancedViewComponent extends AnimatedWorldModelViewer {
 				}
 			}
 		});
+		
+		for (ViewLayer layer : super.getLayers()) {
+			if ("Neighbours".equals(layer.getName())) {
+				layer.setVisible(false);
+			}
+		}
 	}
 
 	/**
@@ -246,7 +253,7 @@ public class AdvancedViewComponent extends AnimatedWorldModelViewer {
 					- t.screenToX(endX), t.screenToY(startY)
 					- t.screenToY(endY))), 16, 32);
 		}
-
+		
 		// 復元
 		g.setColor(tmpColor);
 		g.setStroke(tmpStroke);
@@ -257,7 +264,7 @@ public class AdvancedViewComponent extends AnimatedWorldModelViewer {
 			StandardWorldModel model, StandardEntityURN urn) {
 		for (StandardEntity se : model.getEntitiesOfType(urn)) {
 			Human hm = (Human) se;
-			if (hm.isPositionDefined()) {
+			if (hm.isXDefined() && hm.isYDefined()) {
 				int sx = t.xToScreen(hm.getX());
 				int sy = t.yToScreen(hm.getY());
 				g.drawLine(sx - 10, sy - 10, sx + 10, sy + 10);

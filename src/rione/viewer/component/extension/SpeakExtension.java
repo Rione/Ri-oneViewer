@@ -44,7 +44,7 @@ public class SpeakExtension implements EntityExtension {
 	 *            要素1つが1行に表示されます
 	 */
 	public SpeakExtension(ArrayList<String> str) {
-		this(null, (String[]) str.toArray(), Color.black, Color.WHITE, Color.black);
+		this(null, str.toArray(new String[]{}), Color.black, Color.WHITE, Color.black);
 	}
 
 	/**
@@ -73,7 +73,7 @@ public class SpeakExtension implements EntityExtension {
 	 *            要素1つが1行に表示されます
 	 */
 	public SpeakExtension(EntityExtension base, ArrayList<String> str) {
-		this(base, (String[]) str.toArray(), Color.black, Color.WHITE, Color.black);
+		this(base, str.toArray(new String[] {}), Color.black, Color.WHITE, Color.black);
 	}
 
 	/**
@@ -93,7 +93,7 @@ public class SpeakExtension implements EntityExtension {
 	}
 
 	public SpeakExtension(EntityExtension base, ArrayList<String> str, Color edge, Color inside, Color string_color) {
-		this(base, (String[]) str.toArray(), edge, inside, string_color);
+		this(base, str.toArray(new String[]{}), edge, inside, string_color);
 	}
 
 	/**
